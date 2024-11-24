@@ -26,7 +26,10 @@ const ProductPicker = forwardRef((props, ref) => {
     } else if (data.length > 0) {
       setProductList((prev) => [...prev, ...data]);
     }
-  }, [data]);
+  }, [
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    data,
+  ]);
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -76,12 +79,16 @@ const ProductPicker = forwardRef((props, ref) => {
       setPage((prev) => prev + 1);
     }
   };
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const container = containerRef.current;
     container.addEventListener("scroll", handleScroll);
     return () => container.removeEventListener("scroll", handleScroll);
-  }, [hasMore, loading]);
+  }, [
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    hasMore,
+    loading,
+  ]);
 
   return (
     <div className="product-picker">
