@@ -1,0 +1,27 @@
+/* CustomModal styles */
+.ant-modal-title {
+  font-weight: bold;
+  font-size: 18px;
+
+  margin-bottom: 0;
+}
+
+.ant-modal-body {
+  padding: 16px;
+}
+
+/* Styling for the footer buttons */
+.custom-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.custom-modal-footer button {
+  margin-right: 8px;
+}
+
+
+.custom-modal-footer button:last-child {
+  margin-right: 0;
+}
